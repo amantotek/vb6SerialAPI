@@ -1,0 +1,36 @@
+Introduction: In Microsoft Visual Basic 6 (VB6) the MSComm.ocx way of using serial ports is not valid for ports above 16.
+Quote (MSComm Help file): CommPort Property
+  "You can set value to any number between 1 and 16"
+
+The class in this repository can be used with ports below and above the 16 port boundary.
+It contains standardized public functions, for example, to set up a port, open, read, write and close the port.
+The class can be instantiated for one com port or say a series in an array.
+
+To make test harness/demonstrator for VB6 Serial API class...
+
+Need:
+* VB6 form:  frmVB6serialAPItest.frm
+* VB6 class: clsVB6serialAPI.cls
+* Microsoft VB6 development system able to run under say WinXP or Win7
+The form is just an example of the public functions in the class being called.
+The public functions in the class all return a text string with error message and most return a blank string if the operation suceeded. 
+
+Sequence:
+* Create new folder. Suggested name: vb6SerialAPI
+* Copy Form and Class (two files) into this folder
+* Launch VB6 development system, New Project, New Standard Exe, Open
+* Remove Form1 (Right click on it to get drop down menu, select Remove)
+* Add form existing frmVB6serialAPItest.frm
+* Add class existing clsVB6serialAPI.cls
+* Project (tab)/Project Properties...
+*   Startup Object - select form just copied into folder from dropdown box.
+*   Project Name   - vb6SerialAPI
+* Run
+* Check form with buttons appears and vb6SerialAPI.vbp was created in new folder.
+
+Acknowledgements:
+Acknowledgements and thanks to the author of http://www.thescarms.com/vbasic/CommIO.aspx
+who created module modCOMM or CommIO.bas on which the class is based with as few changes as possible.
+
+Latest class version: 20140515_2040
+
